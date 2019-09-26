@@ -1,2 +1,11 @@
-<h1>Houses#index</h1>
-<p>Find me in app/views/houses/index.html.erb</p>
+<h1>Hogwarts School for Wiiiiiiizards</h1>
+
+<% @houses.each do |house| %>
+  <h2><%= house.name %></h2>
+  <p>This house has <%= pluralize house.points, 'point' %>.</p>
+  <ul>
+    <% house.students.each do |student| %>
+      <li><%= student.name %></li>
+    <% end %>
+  </ul>
+<% end %>
