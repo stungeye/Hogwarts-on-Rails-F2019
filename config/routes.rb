@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   # get '/houses', to: 'houses#index'
   # get '/houses/:id', to: 'houses#show', id: /\d+/
 
+  resources :students, only: :show
+  # get '/students/:id', to: 'students#show', id: /\d+/
+
   root to: 'houses#index'
 end

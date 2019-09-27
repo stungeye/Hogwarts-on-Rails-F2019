@@ -3,7 +3,7 @@
 <p>This house has <%= pluralize @house.points, 'point' %>.</p>
 <ul>
   <% @house.students.each do |student| %>
-    <li><%= student.name %></li>
+    <li><%= link_to student.name, student %></li>
   <% end %>
 </ul>
 
