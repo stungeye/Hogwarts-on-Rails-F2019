@@ -1,2 +1,8 @@
-<h1>Houses#show</h1>
-<p>Find me in app/views/houses/show.html.erb</p>
+<h2><%= @house.name %></h2>
+
+<p>This house has <%= pluralize @house.points, 'point' %>.</p>
+<ul>
+  <% @house.students.each do |student| %>
+    <li><%= student.name %></li>
+  <% end %>
+</ul>

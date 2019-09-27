@@ -8,5 +8,10 @@ class HousesController < ApplicationController
   # app/views/houses/index.html.erb
   # All instance variables are shared with the view.
 
-  def show; end
+  def show
+    @house = House.find(params[:id])
+  end
+  # Automagically load up the associated view.
+  # app/views/houses/show.html.erb
+  # This view will get access to the @house variable.
 end
