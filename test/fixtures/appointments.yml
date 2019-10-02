@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scheduled: 2019-10-02 15:32:20
+  student: one
+  teacher: one
+
+two:
+  scheduled: 2019-10-02 15:32:20
+  student: two
+  teacher: two
