@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'appointments/index'
+  resources :appointments, only: :index
+  # get /appointments, to: 'appointments#index'
+
   resources :houses, only: %i[index show]
   # ^ This command creates the same routes as the following two:
   # get '/houses', to: 'houses#index'
