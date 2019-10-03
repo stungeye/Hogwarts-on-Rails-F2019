@@ -6,7 +6,7 @@
   <ul>
   <% @appointments.each do |appointment| %>
     <li>
-      <%= appointment.teacher.name %> will be meeting with
+      <%= link_to appointment.teacher.name, appointment.teacher %> will be meeting with
       <%= link_to appointment.student.name, appointment.student %> on <%= appointment.scheduled %>.
     </li>
   <% end %>

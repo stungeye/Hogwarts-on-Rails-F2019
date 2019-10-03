@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'teachers/show'
   resources :pages
 
   get '/static/:permalink', to: 'pages#permalink', as: 'permalink'
@@ -16,6 +15,9 @@ Rails.application.routes.draw do
 
   resources :students, only: :show
   # get '/students/:id', to: 'students#show', id: /\d+/
+
+  resources :teachers, only: :show
+  # get '/teachers/:id', to: 'teachers#show', id: /\d+/
 
   root to: 'houses#index'
 end
