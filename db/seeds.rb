@@ -4,6 +4,7 @@ Appointment.destroy_all
 Teacher.destroy_all
 Student.destroy_all
 House.destroy_all
+Page.destroy_all
 
 8.times do
   house = House.create(

@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 class PagesController < ApplicationController
-  http_basic_authenticate_with name: 'fullstack', password: 'toomanysecrets'
+  http_basic_authenticate_with(
+    name: 'fullstack',
+    password: 'toomanysecrets!',
+    except: :permalink
+  )
 
   before_action :set_page, only: %i[show edit update destroy]
 
