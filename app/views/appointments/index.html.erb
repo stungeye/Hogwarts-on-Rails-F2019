@@ -1,10 +1,14 @@
 <h1>Appointments</h1>
 
-<ul>
-<% @appointments.each do |appointment| %>
-  <li>
-    <%= appointment.teacher.name %> will be meeting with
-    <%= appointment.student.name %> on <%= appointment.scheduled %>.
-  </li>
+<% if @appointments.empty? %>
+  <p>There are no appointments.</p>
+<% else %>
+  <ul>
+  <% @appointments.each do |appointment| %>
+    <li>
+      <%= appointment.teacher.name %> will be meeting with
+      <%= link_to appointment.student.name, appointment.student %> on <%= appointment.scheduled %>.
+    </li>
+  <% end %>
+  </ul>
 <% end %>
-</ul>
