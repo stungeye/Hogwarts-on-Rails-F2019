@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'teachers/show'
   resources :pages
 
   get '/static/:permalink', to: 'pages#permalink', as: 'permalink'
