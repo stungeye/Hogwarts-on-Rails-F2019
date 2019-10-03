@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :pages
   resources :appointments, only: :index
   # get /appointments, to: 'appointments#index'
 
