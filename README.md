@@ -8,3 +8,4 @@ To install and run this Rails project:
     yarn install
     rails db:migrate
     rails db:seed
+    rails server
