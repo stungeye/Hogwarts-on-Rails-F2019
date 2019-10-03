@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', permalink_path(permalink: 'about_us') %></li>
+          <li><%= link_to 'FAQ', permalink_path(permalink: 'faq') %></li>
+        </ul>
+      </nav>
+    </header>
+
     <%= yield %>
   </body>
 </html>

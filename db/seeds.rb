@@ -34,6 +34,9 @@ rand(10..20).times do
   Appointment.create(teacher: t, student: s, scheduled: scheduled)
 end
 
+Page.create(title: 'About Us', content: 'Please fill this in.', permalink: 'about_us')
+Page.create(title: 'Frequently Asked Questions', content: 'Please fill this in.', permalink: 'faq')
+
 puts "Generated #{House.count} houses."
 puts "Generated #{Student.count} students."
 puts "Generated #{Teacher.count} teachers."
