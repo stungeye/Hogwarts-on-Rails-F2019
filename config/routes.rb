@@ -2,6 +2,9 @@
 
 Rails.application.routes.draw do
   resources :pages
+
+  get '/static/:permalink', to: 'pages#permalink', as: 'permalink'
+
   resources :appointments, only: :index
   # get /appointments, to: 'appointments#index'
 

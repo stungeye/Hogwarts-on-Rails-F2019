@@ -1,18 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @page.title %>
-</p>
+</h1>
 
 <p>
-  <strong>Content:</strong>
   <%= @page.content %>
-</p>
-
-<p>
-  <strong>Permalink:</strong>
-  <%= @page.permalink %>
 </p>
 
 <%= link_to 'Edit', edit_page_path(@page) %> |
